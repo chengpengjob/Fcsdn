@@ -4,7 +4,6 @@ server:
   tomcat:
     uri-encoding: UTF-8
 
-#  ˝æ›‘¥≈‰÷√
 spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
@@ -18,3 +17,5 @@ spring:
     show-sql: true
   thymeleaf:
     cache: false
+
+    userImageFilePath: D://userImages/

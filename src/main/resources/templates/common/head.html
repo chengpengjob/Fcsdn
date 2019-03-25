@@ -4,10 +4,21 @@
 	  <li class="layui-nav-item"><a href="/">首页</a></li>
 	  <li class="layui-nav-item"><a href="/toVipPage">VIP购买</a></li>
 	  <li class="layui-nav-item"><a href="http://www.baidu.com" target="_blank">飞鹏</a></li>
-	  
-	   
-	  
-	  <li class="layui-nav-item" style="float: right;"><a onclick="showRegister()" style="padding-left: 8px;padding-right: 8px;" target="_blank">注册</a></li>
-	  <li class="layui-nav-item" style="float: right;"><a onclick="showLogin()" style="padding-left: 8px;padding-right: 8px;" target="_blank">登录</a></li>
+		<li th:if="${session.currentUser!=null}" class="layui-nav-item" style="float: right;">
+			<a href="/toUserCenterPage"><img class="layui-nav-img" th:src="${'/userImage/'+session.currentUser.imageName}" th:text="${session.currentUser.userName}"></img></a>
+			<dl class="layui-nav-child">
+				<dd><a onclick="showModifyPassword()">修改密码</a></dd>
+				<dd><a onclick="showModifyUserImage()">修改头像</a></dd>
+				<dd><a href="/logout">安全退出</a></dd>
+			</dl>
+		</li>
+		<li th:if="${session.currentUser!=null}" class="layui-nav-item" style="float: right;">
+			<a href="/toUserCenterPage">个人中心<span class="layui-badge-dot"></span></a>
+		</li>
+		<li th:if="${session.currentUser!=null}" class="layui-nav-item" style="float: right;">
+			<a href="/user/message/see">系统消息<span class="layui-badge" id="messageCount">1</span></a>
+		</li>
+		<li th:if="${session.currentUser==null}" class="layui-nav-item" style="float: right;"><a onclick="showRegister()" style="padding-left: 8px;padding-right: 8px;" target="_blank">注册</a></li>
+		<li th:if="${session.currentUser==null}" class="layui-nav-item" style="float: right;"><a onclick="showLogin()" style="padding-left: 8px;padding-right: 8px;" target="_blank">登录</a></li>
 	</ul>
 </div>
