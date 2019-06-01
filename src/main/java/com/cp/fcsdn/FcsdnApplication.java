@@ -8,6 +8,7 @@ public class FcsdnApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(FcsdnApplication.class, args);
+
     }
 
 }

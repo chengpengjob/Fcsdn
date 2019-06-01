@@ -69,8 +69,8 @@ public class UserController {
         CloseableHttpClient httpClient=HttpClients.createDefault();
         HttpPost httpPost=new HttpPost("http://api.vaptcha.com/v2/validate");
         List<NameValuePair> nvps = new ArrayList<NameValuePair>();
-        nvps.add(new BasicNameValuePair("id", "5c9834b8fc650e73d4434734"));
-        nvps.add(new BasicNameValuePair("secretkey", "150d242036aa45bcb649505579e6bc54"));
+        nvps.add(new BasicNameValuePair("id", "5cf20cdefc650e61cc5617c5"));
+        nvps.add(new BasicNameValuePair("secretkey", "d9a73f0721954f7ba966b241398852eb"));
         nvps.add(new BasicNameValuePair("scene", ""));
         nvps.add(new BasicNameValuePair("token", token));
         nvps.add(new BasicNameValuePair("ip", ip));
@@ -195,7 +195,7 @@ public class UserController {
         String mailCode = StringUtil.genSixRandomNum();
         System.out.println("mailCode:"+mailCode);
         SimpleMailMessage message=new SimpleMailMessage();
-        message.setFrom("554605804@qq.com"); // 发件人
+        message.setFrom("1732141057@qq.com"); // 发件人
         message.setTo(email);
         message.setSubject("飞鹏下载站点-用户找回密码"); // 主题
         message.setText("验证码："+mailCode);

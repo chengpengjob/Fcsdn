@@ -21,19 +21,19 @@
     		<div class="data_search">
     			<div>
     				<table>
-    					<tr>
-    						<td width="80px" style="padding-top: 0px;padding-bottom: 28px;"><font class="stitle">资源类别：</font></td>
-    						<td>
-    							<ul>
-			    					<li><a href="/"><span id="t_0">全部</span></a></li>
-				    				<li th:each="arcType:${application.allArcTypeList}">
-								  	  	<a th:href="'/article/list/1?typeId='+${arcType.id}" th:title="${arcType.name}">
-								  	 	 	<span th:id="'t_'+${arctype.id}" th:text="${arcType.name}"></span>
-								  	  	</a>
-								   </li>
-			    				</ul>
-    						</td>
-    					</tr>
+                        <tr>
+                            <td width="80px" style="padding-top: 0px;padding-bottom: 28px;"><font class="stitle">资源类别：</font></td>
+                            <td>
+                                <ul>
+                                    <li><a href="/"><span id="t_0">全部</span></a></li>
+                                    <li th:each="arcType:${application.allArcTypeList}">
+                                        <a th:href="'/article/list/1?typeId='+${arcType.id}" th:title="${arcType.name}">
+                                            <span th:id="'t_'+${arcType.id}" th:text="${arcType.name}"></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
     					<tr>
     						<td>&nbsp;</td>
     					</tr>
@@ -126,7 +126,7 @@
 
 <div class="w1170" th:include="common/foot::#h" style="padding-top: 40px"></div>
 
-<script src="/static/layui/layui.js"></script>
+<script src="/static/layui/layui.all.js"></script>
 <script src="/static/js/jquery.js"></script>
 <script src="/static/js/common.js"></script>
 <script th:inline="javascript">

@@ -18,4 +18,4 @@ spring:
   thymeleaf:
     cache: false
 
-    userImageFilePath: D://userImages/
+userImageFilePath: D://userImages/
